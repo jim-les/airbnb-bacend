@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scraped Data</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+    .teams_card{
+        max-width: 400px;
+        padding: 3px 50px;
+        border: 1px solid gray;
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgb(41, 39, 39);
+    }
+    .teams{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+</style>
+<body>
+    <h1>Scraped Data</h1>
+    {% for team in teams %}
+        <div class="teams_card">
+            <div class="teams">
+                <div class="image">
+                    <img src="{{ team.home_team_logo }}" alt="" width="30px">
+                    <br>
+                    <img src="{{ team.away_team_logo }}" alt="" width="30px">
+                </div>
+                <div>
+                    <p>{{ team.home_team }}</p>
+                <p>{{ team.away_team }}</p>
+                </div>
+            </div>
+            <dv class="ods">
+                <p>{{ team.home_team_odds }}</p>
+                <p>{{ team.home_team_odds }}</p>
+            </dv>
+        </div>
+    {% endfor %}
+</body>
+</html>
