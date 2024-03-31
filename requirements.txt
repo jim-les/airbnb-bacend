@@ -57,3 +57,5 @@ w3lib==2.1.2
 websockets==12.0
 wsproto==1.2.0
 zope.interface==6.2
+pydantic
+mysql-connector-python
